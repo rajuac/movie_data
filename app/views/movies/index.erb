@@ -1,0 +1,24 @@
+<h1>Movie List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |mv| %>
+      <tr>
+        <td><%= mv["Title"] %></td>
+        <td><%= mv["Year"] %></td>
+        <td><%= link_to "Show", movies_show_path(:id=>mv["imdbID"]) %></td>
+        <td><%= link_to "Add to favorites" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -19,7 +19,7 @@
         <td><%= mv["Title"] %></td>
         <td><%= mv["Year"] %></td>
         <td><%= link_to "Show", movies_show_path(:id=>mv["imdbID"]) %></td>
-        <td><%= link_to "Add to favorites", movies_favourites_add_path(:id=>mv["imdbID"])%></td>
+        <td><%= link_add_favourites(mv["imdbID"]) %></td>
       </tr>
     <% end %>
   </tbody>

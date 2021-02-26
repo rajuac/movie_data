@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #for api
 gem 'httparty'
 gem 'minitest'
+gem 'pry'
+gem 'coderay'

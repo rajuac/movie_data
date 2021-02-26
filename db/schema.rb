@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_154316) do
+ActiveRecord::Schema.define(version: 2021_02_26_064739) do
 
   create_table "favourite_movies", force: :cascade do |t|
     t.text "movie_data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "imdb_id"
   end
 
 end

@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'movies/favourites_add' => 'movies#favourites_add'
   get 'movies/search_movies' => 'movies#search_movies'
   get 'movies/list_favourites' => 'movies#list_favourites'
+  get 'movies/home' =>'movies#home'
+  root :to => "movies#home"
+
 
   #resource :movies
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -1,4 +1,4 @@
-<h1>Movie List</h1>
+<h1>Favourite Movie List</h1>
 <% flash.each do |key, value| %>
   <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
@@ -15,10 +15,8 @@
   <tbody>
     <% @movies.each do |mv| %>
       <tr>
-        <td><%= mv["Title"] %></td>
-        <td><%= mv["Year"] %></td>
-        <td><%= link_to "Show", movies_show_path(:id=>mv["imdbID"]) %></td>
-        <td><%= link_to "Add to favorites", movies_favourites_add_path(:id=>mv["imdbID"])%></td>
+        <td><%= mv.movie_data["Title"] %></td>
+        <td><%= mv.movie_data["Year"] %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
-    @@movie = MovieDataManager.new
+  add_flash_types :success, :warning, :danger, :info
+
+  @@movie = MovieDataManager.new
 end
